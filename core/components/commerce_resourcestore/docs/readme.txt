@@ -1,5 +1,4 @@
 Resourcestore for Commerce
 ------------------------
 
-A short description of what Resourcestore does or how to set it up.
-
+Stores resources with selected delivery types in a user's extended field. Requires Modmore's Commerce to use https://www.modmore.com/commerce/.

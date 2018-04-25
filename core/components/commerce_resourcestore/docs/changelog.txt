@@ -1,4 +1,3 @@
-++ Resourcestore for Commerce 0.1.0-pl
-++ Released on
-++++++++++++++++++++++++++
+++ Resourcestore for Commerce 0.11.0-pl
+++ Released on 4/25/2018
 - First release
