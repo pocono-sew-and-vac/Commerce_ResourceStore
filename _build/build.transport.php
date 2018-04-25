@@ -65,25 +65,23 @@ $modx->loadClass('transport.modPackageBuilder','',false, true);
 $builder = new modPackageBuilder($modx);
 $builder->directory = $targetDirectory;
 $builder->createPackage(PKG_NAMESPACE,PKG_VERSION,PKG_RELEASE);
-$builder->registerNamespace(PKG_NAMESPACE,false,true,'{core_path}components/'.PKG_NAMESPACE.'/', '{assets_path}components/'.PKG_NAMESPACE.'/');
-
+/** @var modNamespace $namespace */
+$namespace = $modx->newObject('modNamespace');
+$namespace->set('name', PKG_NAMESPACE);
+$namespace->set('path', '{core_path}components/'.PKG_NAMESPACE.'/');
+$namespace->set('assets_path', '{assets_path}components/'.PKG_NAMESPACE.'/');
+/* define some basic attributes */
+$attributes = array (
+    xPDOTransport::UNIQUE_KEY => 'name',
+    xPDOTransport::PRESERVE_KEYS => true,
+    xPDOTransport::UPDATE_OBJECT => true,
+    xPDOTransport::RESOLVE_FILES => true,
+    xPDOTransport::RESOLVE_PHP => true,
+);
+/** @var modTransportVehicle $vehicle */
+$vehicle = $builder->createVehicle($namespace, $attributes);
 $modx->log(modX::LOG_LEVEL_INFO,'Packaged in namespace.'); flush();
 
-/* Settings */
-$settings = include $sources['data'].'transport.settings.php';
-$attributes= array(
-    xPDOTransport::UNIQUE_KEY => 'key',
-    xPDOTransport::PRESERVE_KEYS => true,
-    xPDOTransport::UPDATE_OBJECT => false,
-);
-if (is_array($settings)) {
-    foreach ($settings as $setting) {
-        $vehicle = $builder->createVehicle($setting,$attributes);
-        $builder->putVehicle($vehicle);
-    }
-    $modx->log(modX::LOG_LEVEL_INFO,'Packaged in '.count($settings).' system settings.'); flush();
-    unset($settings,$setting,$attributes);
-}
 
 // Add the validator to check server requirements
 $vehicle->validate('php', array('source' => $sources['validators'] . 'requirements.script.php'));
