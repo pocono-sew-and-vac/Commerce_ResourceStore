@@ -105,7 +105,7 @@ include $componentPath . '/core/components/commerce_resourcestore/vendor/autoloa
 $modulePath = $componentPath . '/core/components/commerce_resourcestore/src/Modules/';
 
 // Instruct Commerce to load modules from our directory, providing the base namespace and module path twice
-$commerce->loadModulesFromDirectory($modulePath, 'ThirdParty\\Resourcestore\\Modules\\', $modulePath);
+$commerce->loadModulesFromDirectory($modulePath, 'PoconoSewVac\\Resourcestore\\Modules\\', $modulePath);
 
 // Clear the cache
 $modx->cacheManager->refresh();

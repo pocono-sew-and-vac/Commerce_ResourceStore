@@ -1,5 +1,5 @@
 <?php
-namespace ThirdParty\Resourcestore\Modules;
+namespace PoconoSewVac\Resourcestore\Modules;
 use modmore\Commerce\Modules\BaseModule;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use modmore\Commerce\Admin\Widgets\Form\TextField as TextField;
