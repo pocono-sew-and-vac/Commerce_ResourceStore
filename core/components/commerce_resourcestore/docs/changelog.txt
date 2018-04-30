@@ -1,3 +1,7 @@
 ++ Resourcestore for Commerce 0.11.0-pl
+
+++ 1.0.3
+- Fixes server error due to incorrect event type.
+
 ++ Released on 4/25/2018
 - First release
