@@ -69,7 +69,7 @@ class Resourcestore extends BaseModule {
     * @param OrderItem event
     * @return void
     */
-    public function checkOrderItems(\modmore\Commerce\Events\OrderItem $event)
+    public function checkOrderItems(\modmore\Commerce\Events\Payment $event)
     {
         if ($this->isLoggedIn()) {
         	$items = $event->getOrder()->getItems();
