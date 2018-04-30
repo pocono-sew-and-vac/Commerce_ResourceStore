@@ -132,9 +132,6 @@ class Resourcestore extends BaseModule {
             'label' => $this->adapter->lexicon('commerce_resourcestore.delivery_types_label'),
             'options' => $this->getDeliveryTypes(),
             'description' => $this->adapter->lexicon('commerce_resourcestore.delivery_types_description'),
-            'validation' => [
-                new Required()
-            ],
             'value' => $module->getProperty('delivery_types')
         ]);
 
