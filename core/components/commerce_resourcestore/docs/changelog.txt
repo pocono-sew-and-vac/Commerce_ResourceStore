@@ -2,6 +2,7 @@
 
 ++ 1.0.3
 - Fixes server error due to incorrect event type.
+- Now checks to ensure resource with ID 0 is not added.
 
 ++ Released on 4/25/2018
 - First release

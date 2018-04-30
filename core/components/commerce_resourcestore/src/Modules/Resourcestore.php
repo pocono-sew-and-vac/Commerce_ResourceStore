@@ -83,8 +83,9 @@ class Resourcestore extends BaseModule {
                         'id' => $item->get('product')
                     ]);
                     $product = $this->adapter->getObject('comProduct', $query);
-
-                    $this->addToUser($product->get('target'));
+                    
+                    if ($product->get('target') !== 0)
+                        $this->addToUser($product->get('target'));
                 }
         	}
         }
