@@ -29,8 +29,8 @@ Then calling it with pdoResources (where UserResources is the snippet):
 
 ## Installation
 
-Download the transport package from releases or download from modx.com in package manager.
+Download the transport package from releases or download from [modx.com in package manager](https://modx.com/extras/package/commerce_resourcestore).
 
 ## Compatibility 
 
-Requires Commerce 0.11 or above due to the usage of `SelectMultipleField` in the module's configuration fields. If compatability with versions before 0.11 is required, you could change it to SelectField instead, however you will only be able to choose 1 delivery type to use this module with.
+Requires Commerce 0.11 or above due to the usage of `SelectMultipleField` in the module's configuration fields. If compatibility with versions before 0.11 is required, you could change it to SelectField instead, however you will only be able to choose 1 delivery type to use this module with.
