@@ -31,6 +31,6 @@ Then calling it with pdoResources (where UserResources is the snippet):
 
 Download the transport package from releases or download from modx.com in package manager.
 
-## Compatability
+## Compatibility 
 
-Requires Commerce 0.11 or above.
+Requires Commerce 0.11 or above due to the usage of `SelectMultipleField` in the module's configuration fields. If compatability with versions before 0.11 is required, you could change it to SelectField instead, however you will only be able to choose 1 delivery type to use this module with.
