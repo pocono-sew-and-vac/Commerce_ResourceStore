@@ -2,9 +2,9 @@
 namespace PoconoSewVac\Resourcestore\Modules;
 use modmore\Commerce\Modules\BaseModule;
 use Symfony\Component\EventDispatcher\EventDispatcher;
-use modmore\Commerce\Admin\Widgets\Form\TextField as TextField;
-use modmore\Commerce\Admin\Widgets\Form\SelectMultipleField as SelectMultipleField;
-use modmore\Commerce\Admin\Widgets\Form\Validation\Required as Required;
+use modmore\Commerce\Admin\Widgets\Form\TextField;
+use modmore\Commerce\Admin\Widgets\Form\SelectMultipleField;
+use modmore\Commerce\Admin\Widgets\Form\Validation\Required;
 
 require_once dirname(dirname(__DIR__)) . '/vendor/autoload.php';
 
